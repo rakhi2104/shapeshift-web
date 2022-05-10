@@ -160,6 +160,7 @@ export const UserMenu: React.FC<{ onClick?: () => void }> = ({ onClick }) => {
           maxWidth={{ base: 'full', md: 'xs' }}
           minWidth={{ base: 0, md: 'xs' }}
           overflow='hidden'
+          zIndex={2}
         >
           {hasWallet ? (
             <WalletConnected
