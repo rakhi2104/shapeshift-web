@@ -1,4 +1,5 @@
 import { Alert, Box } from '@chakra-ui/react'
+import { ChakraStyledOptions } from '@chakra-ui/react'
 import { AssetId } from '@shapeshiftoss/caip'
 import { HistoryTimeframe } from '@shapeshiftoss/types'
 import { useEffect, useMemo } from 'react'
@@ -21,7 +22,7 @@ type PriceChartArgs = {
   percentChange: number
   setPercentChange: (percentChange: number) => void
   chartHeight?: string
-}
+} & ChakraStyledOptions
 
 export const PriceChart: React.FC<PriceChartArgs> = ({
   assetId,

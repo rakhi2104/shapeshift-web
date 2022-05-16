@@ -1,6 +1,7 @@
 import { Box, StatArrow, StatNumber, Text } from '@chakra-ui/react'
 import { HistoryTimeframe } from '@shapeshiftoss/types'
 import { useState } from 'react'
+import { useTranslate } from 'react-polyglot'
 import { Amount } from 'components/Amount/Amount'
 import { Card } from 'components/Card/Card'
 import { TimeControls } from 'components/Graph/TimeControls'
@@ -14,13 +15,14 @@ type FoxChartProps = {
 export const FoxChart = ({ assetId }: FoxChartProps) => {
   const [timeframe, setTimeframe] = useState(HistoryTimeframe.MONTH)
   const [percentChange, setPercentChange] = useState(0)
+  const translate = useTranslate()
 
   return (
     <Card>
       <Card.Body>
         <Box textAlign='center'>
           <Text color='gray.500' fontWeight='semibold'>
-            {'Current Price'}
+            {translate('plugins.foxPage.currentPrice')}
           </Text>
           <Box fontSize='4xl' lineHeight={1} mb={2}>
             <Amount.Fiat value={'4000'} />
