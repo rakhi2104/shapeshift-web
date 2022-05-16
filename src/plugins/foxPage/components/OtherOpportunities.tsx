@@ -1,18 +1,29 @@
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Box, Flex } from '@chakra-ui/layout'
-import { Button, Text as CText } from '@chakra-ui/react'
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Button,
+  Link,
+  Text as CText,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { useTranslate } from 'react-polyglot'
 import { fox } from 'test/mocks/assets'
-import { Amount } from 'components/Amount/Amount'
 import { AssetIcon } from 'components/AssetIcon'
 import { Card } from 'components/Card/Card'
 import { Text } from 'components/Text/Text'
 
-export const MainOpportunity = () => {
+export const OtherOpportunities = () => {
   const translate = useTranslate()
+  const borderColor = useColorModeValue('gray.150', 'gray.700')
 
   return (
     <Card display='block' width='full'>
-      <Card.Header>
+      <Card.Header pb={0}>
         <Flex flexDirection='row' alignItems='center' mb={2}>
           <CText fontWeight='bold' color='inherit'>
             {translate('plugins.foxPage.otherOpportunitiesTitle')}
@@ -23,27 +34,114 @@ export const MainOpportunity = () => {
           color='gray.500'
         />
       </Card.Header>
-      <Card.Body>
-        <Flex justifyContent='space-between' flexDirection={{ base: 'column', md: 'row' }}>
-          <Flex flexDirection='row' alignItems='center'>
-            <AssetIcon src={fox.icon} boxSize='6' mr={2} />
-            <CText color='inherit'>{'Uniswap'}</CText>
-          </Flex>
-          <Box>
-            <Text translation='plugins.foxPage.currentApy' color='gray.500' mb={1} />
-            <Amount.Fiat
-              color='inherit'
-              fontSize={'xl'}
-              fontWeight='semibold'
-              value={tvl.toString()}
-            />
-          </Box>
-          <Box alignSelf='center'>
-            <Button onClick={onClick} colorScheme={'blue'}>
-              <CText>{translate('plugins.foxPage.getStarted')}</CText>
-            </Button>
-          </Box>
-        </Flex>
+      <Card.Body pb={0}>
+        <Accordion mx={-6} allowToggle defaultIndex={0}>
+          <AccordionItem borderColor={borderColor}>
+            <AccordionButton px={6} py={4}>
+              <Box flex='1' textAlign='left' fontWeight='semibold'>
+                {'Liquidity Pools'}
+              </Box>
+              <AccordionIcon color='gray.500' />
+            </AccordionButton>
+            <AccordionPanel pb={4} px={6}>
+              <Flex
+                justifyContent='space-between'
+                flexDirection={{ base: 'column', md: 'row' }}
+                my={4}
+              >
+                <Flex flexDirection='row' alignItems='center'>
+                  <AssetIcon src={fox.icon} boxSize='8' mr={2} />
+                  <CText color='inherit' fontWeight='semibold'>
+                    {'Uniswap'}
+                  </CText>
+                </Flex>
+                <Box ml={{ base: 0, md: '5rem' }}>
+                  <Text translation='plugins.foxPage.currentApy' color='gray.500' />
+                  <CText color='green.400' fontSize={'xl'} lineHeight='1'>
+                    {'11.61%'}
+                  </CText>
+                </Box>
+                <Box alignSelf='center'>
+                  <Button variant='link' colorScheme='blue' as={Link} href='#' isExternal>
+                    <CText mr={2}>{translate('plugins.foxPage.getStarted')}</CText>
+                    <ExternalLinkIcon />
+                  </Button>
+                </Box>
+              </Flex>
+              <Flex
+                justifyContent='space-between'
+                flexDirection={{ base: 'column', md: 'row' }}
+                my={4}
+              >
+                <Flex flexDirection='row' alignItems='center'>
+                  <AssetIcon src={fox.icon} boxSize='8' mr={2} />
+                  <CText color='inherit' fontWeight='semibold'>
+                    {'Uniswap'}
+                  </CText>
+                </Flex>
+                <Box ml={{ base: 0, md: '5rem' }}>
+                  <Text translation='plugins.foxPage.currentApy' color='gray.500' />
+                  <CText color='green.400' fontSize={'xl'} lineHeight='1'>
+                    {'11.61%'}
+                  </CText>
+                </Box>
+                <Box alignSelf='center'>
+                  <Button variant='link' colorScheme='blue' as={Link} href='#' isExternal>
+                    <CText mr={2}>{translate('plugins.foxPage.getStarted')}</CText>
+                    <ExternalLinkIcon />
+                  </Button>
+                </Box>
+              </Flex>
+              <Flex
+                justifyContent='space-between'
+                flexDirection={{ base: 'column', md: 'row' }}
+                my={4}
+              >
+                <Flex flexDirection='row' alignItems='center'>
+                  <AssetIcon src={fox.icon} boxSize='8' mr={2} />
+                  <CText color='inherit' fontWeight='semibold'>
+                    {'Uniswap'}
+                  </CText>
+                </Flex>
+                <Box ml={{ base: 0, md: '5rem' }}>
+                  <Text translation='plugins.foxPage.currentApy' color='gray.500' />
+                  <CText color='green.400' fontSize={'xl'} lineHeight='1'>
+                    {'11.61%'}
+                  </CText>
+                </Box>
+                <Box alignSelf='center'>
+                  <Button variant='link' colorScheme='blue' as={Link} href='#' isExternal>
+                    <CText mr={2}>{translate('plugins.foxPage.getStarted')}</CText>
+                    <ExternalLinkIcon />
+                  </Button>
+                </Box>
+              </Flex>
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem borderColor={borderColor}>
+            <AccordionButton px={6} py={4}>
+              <Box flex='1' textAlign='left' fontWeight='semibold'>
+                {'Farming'}
+              </Box>
+              <AccordionIcon color='gray.500' />
+            </AccordionButton>
+            <AccordionPanel pb={4} px={6}>
+              Lorem ipsum sit dolor amet
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem _last={{ borderBottomWidth: 0 }} borderColor={borderColor}>
+            <AccordionButton px={6} py={4}>
+              <Box flex='1' textAlign='left' fontWeight='semibold'>
+                {'Borrowing & Lending'}
+              </Box>
+              <AccordionIcon color='gray.500' />
+            </AccordionButton>
+            <AccordionPanel pb={4} px={6}>
+              Lorem ipsum sit dolor amet
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
       </Card.Body>
     </Card>
   )

@@ -11,6 +11,7 @@ import { AssetActions } from './AssetActions'
 import { FoxTab } from './FoxTab'
 import { Layout } from './Layout'
 import { MainOpportunity } from './MainOpportunity'
+import { OtherOpportunities } from './OtherOpportunities'
 import { Total } from './Total'
 
 export default {
@@ -88,6 +89,7 @@ export const FoxLayout: Story = () => {
                   apy='11.61%'
                   onClick={() => null}
                 />
+                <OtherOpportunities />
               </Stack>
               <Stack flex='1 1 0%' width='full' maxWidth={{ base: 'full', xl: 'sm' }} spacing={4}>
                 <AssetActions
@@ -118,6 +120,7 @@ export const FoxLayout: Story = () => {
                   apy='11.61%'
                   onClick={() => null}
                 />
+                <OtherOpportunities />
               </Stack>
               <Stack flex='1 1 0%' width='full' maxWidth={{ base: 'full', xl: 'sm' }} spacing={4}>
                 <AssetActions
@@ -148,6 +151,7 @@ export const FoxLayout: Story = () => {
                   apy='11.61%'
                   onClick={() => null}
                 />
+                <OtherOpportunities />
               </Stack>
               <Stack flex='1 1 0%' width='full' maxWidth={{ base: 'full', xl: 'sm' }} spacing={4}>
                 <AssetActions
