@@ -980,7 +980,8 @@
       "tvl": "TVL",
       "currentApy": "Current APY",
       "balance": "Balance",
-      "getStarted": "Get Started"
+      "getStarted": "Get Started",
+      "availableToTradeOn": "Available to Trade On"
     }
   }
 }

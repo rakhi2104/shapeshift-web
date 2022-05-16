@@ -12,6 +12,7 @@ import { FoxTab } from './FoxTab'
 import { Layout } from './Layout'
 import { MainOpportunity } from './MainOpportunity'
 import { Total } from './Total'
+import { TradeOpportunities } from './TradeOpportunities'
 
 export default {
   title: 'Plugins/FoxPage/Layout',
@@ -101,6 +102,7 @@ export const FoxLayout: Story = () => {
                   onReceiveClick={() => null}
                   onGetClick={() => null}
                 />
+                <TradeOpportunities />
               </Stack>
             </Stack>
           </TabPanel>
@@ -131,6 +133,7 @@ export const FoxLayout: Story = () => {
                   onReceiveClick={() => null}
                   onGetClick={() => null}
                 />
+                <TradeOpportunities />
               </Stack>
             </Stack>
           </TabPanel>
@@ -161,6 +164,7 @@ export const FoxLayout: Story = () => {
                   onReceiveClick={() => null}
                   onGetClick={() => null}
                 />
+                <TradeOpportunities />
               </Stack>
             </Stack>
           </TabPanel>
