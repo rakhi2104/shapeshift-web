@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Box, Flex } from '@chakra-ui/layout'
+import { Badge, Box, Flex } from '@chakra-ui/layout'
 import {
   Accordion,
   AccordionButton,
@@ -41,13 +41,26 @@ export const OtherOpportunities = () => {
               <Box flex='1' textAlign='left' fontWeight='semibold'>
                 {'Liquidity Pools'}
               </Box>
-              <AccordionIcon color='gray.500' />
+              <Flex>
+                <Badge
+                  colorScheme='blue'
+                  display='flex'
+                  alignItems='center'
+                  px={2}
+                  py={'2px'}
+                  borderRadius='md'
+                  mr={4}
+                >
+                  {'3'}
+                </Badge>
+                <AccordionIcon color='gray.500' />
+              </Flex>
             </AccordionButton>
-            <AccordionPanel pb={4} px={6}>
+            <AccordionPanel pb={4} px={6} my={-4}>
               <Flex
                 justifyContent='space-between'
                 flexDirection={{ base: 'column', md: 'row' }}
-                my={4}
+                my={8}
               >
                 <Flex flexDirection='row' alignItems='center'>
                   <AssetIcon src={fox.icon} boxSize='8' mr={2} />
@@ -56,7 +69,7 @@ export const OtherOpportunities = () => {
                   </CText>
                 </Flex>
                 <Box ml={{ base: 0, md: '5rem' }}>
-                  <Text translation='plugins.foxPage.currentApy' color='gray.500' />
+                  <Text translation='plugins.foxPage.currentApy' color='gray.500' mb={1} />
                   <CText color='green.400' fontSize={'xl'} lineHeight='1'>
                     {'11.61%'}
                   </CText>
@@ -71,7 +84,7 @@ export const OtherOpportunities = () => {
               <Flex
                 justifyContent='space-between'
                 flexDirection={{ base: 'column', md: 'row' }}
-                my={4}
+                my={8}
               >
                 <Flex flexDirection='row' alignItems='center'>
                   <AssetIcon src={fox.icon} boxSize='8' mr={2} />
@@ -80,7 +93,7 @@ export const OtherOpportunities = () => {
                   </CText>
                 </Flex>
                 <Box ml={{ base: 0, md: '5rem' }}>
-                  <Text translation='plugins.foxPage.currentApy' color='gray.500' />
+                  <Text translation='plugins.foxPage.currentApy' color='gray.500' mb={1} />
                   <CText color='green.400' fontSize={'xl'} lineHeight='1'>
                     {'11.61%'}
                   </CText>
@@ -95,7 +108,7 @@ export const OtherOpportunities = () => {
               <Flex
                 justifyContent='space-between'
                 flexDirection={{ base: 'column', md: 'row' }}
-                my={4}
+                my={8}
               >
                 <Flex flexDirection='row' alignItems='center'>
                   <AssetIcon src={fox.icon} boxSize='8' mr={2} />
@@ -104,7 +117,7 @@ export const OtherOpportunities = () => {
                   </CText>
                 </Flex>
                 <Box ml={{ base: 0, md: '5rem' }}>
-                  <Text translation='plugins.foxPage.currentApy' color='gray.500' />
+                  <Text translation='plugins.foxPage.currentApy' color='gray.500' mb={1} />
                   <CText color='green.400' fontSize={'xl'} lineHeight='1'>
                     {'11.61%'}
                   </CText>
@@ -124,10 +137,47 @@ export const OtherOpportunities = () => {
               <Box flex='1' textAlign='left' fontWeight='semibold'>
                 {'Farming'}
               </Box>
-              <AccordionIcon color='gray.500' />
+              <Flex>
+                <Badge
+                  colorScheme='blue'
+                  display='flex'
+                  alignItems='center'
+                  px={2}
+                  py={'2px'}
+                  borderRadius='md'
+                  mr={4}
+                >
+                  {'1'}
+                </Badge>
+                <AccordionIcon color='gray.500' />
+              </Flex>
             </AccordionButton>
             <AccordionPanel pb={4} px={6}>
-              Lorem ipsum sit dolor amet
+              <Flex
+                justifyContent='space-between'
+                flexDirection={{ base: 'column', md: 'row' }}
+                my={8}
+              >
+                <Flex flexDirection='row' alignItems='center'>
+                  <AssetIcon src={fox.icon} boxSize='8' />
+                  <AssetIcon src={fox.icon} boxSize='8' ml={'-3.5'} mr={2} />
+                  <CText color='inherit' fontWeight='semibold'>
+                    {'Uniswap'}
+                  </CText>
+                </Flex>
+                <Box ml={{ base: 0, md: '5rem' }}>
+                  <Text translation='plugins.foxPage.currentApy' color='gray.500' mb={1} />
+                  <CText color='green.400' fontSize={'xl'} lineHeight='1'>
+                    {'11.61%'}
+                  </CText>
+                </Box>
+                <Box alignSelf='center'>
+                  <Button variant='link' colorScheme='blue' as={Link} href='#' isExternal>
+                    <CText mr={2}>{translate('plugins.foxPage.getStarted')}</CText>
+                    <ExternalLinkIcon />
+                  </Button>
+                </Box>
+              </Flex>
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem _last={{ borderBottomWidth: 0 }} borderColor={borderColor}>
@@ -135,7 +185,20 @@ export const OtherOpportunities = () => {
               <Box flex='1' textAlign='left' fontWeight='semibold'>
                 {'Borrowing & Lending'}
               </Box>
-              <AccordionIcon color='gray.500' />
+              <Flex>
+                <Badge
+                  colorScheme='blue'
+                  display='flex'
+                  alignItems='center'
+                  px={2}
+                  py={'2px'}
+                  borderRadius='md'
+                  mr={4}
+                >
+                  {'0'}
+                </Badge>
+                <AccordionIcon color='gray.500' />
+              </Flex>
             </AccordionButton>
             <AccordionPanel pb={4} px={6}>
               Lorem ipsum sit dolor amet
